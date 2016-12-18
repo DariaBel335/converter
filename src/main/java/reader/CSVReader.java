@@ -15,13 +15,11 @@ public class CSVReader implements Reader {
         try {
             BufferedReader br = new BufferedReader(new FileReader(filePath));
             br.readLine(); // skip the first example line
-
             String line;
             while ((line = br.readLine()) != null) {
                 User user = UserUtils.createUser(line.split(","));
                 users.add(user);
             }
-
             return users;
         } catch (IOException e) {
             throw new RuntimeException("File cannot be read", e);
