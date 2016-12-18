@@ -20,7 +20,7 @@ import static constants.Constants.FileFieldsNamesConstants.SECONDARY_EMAIL;
 
 public class ListToDocConverter implements Converter {
 
-    public void generateDoc(List<User> users, String outFilePath) {
+    public void generate(List<User> users, String outFilePath) {
         //Blank Document
         XWPFDocument document = new XWPFDocument();
 
