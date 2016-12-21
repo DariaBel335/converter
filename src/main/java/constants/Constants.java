@@ -1,5 +1,8 @@
 package constants;
 
+/**Class which contains all Constants
+ *
+ */
 public final class Constants {
 
     public final class FileConstants {

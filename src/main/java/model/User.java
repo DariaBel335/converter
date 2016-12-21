@@ -1,7 +1,6 @@
 package model;
 
-/**
- * User Model
+/**User Model
  */
 public class User {
     private String firstName;

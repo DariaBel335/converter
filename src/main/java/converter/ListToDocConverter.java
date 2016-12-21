@@ -18,14 +18,22 @@ import static constants.Constants.FileFieldsNamesConstants.PASSWORD;
 import static constants.Constants.FileFieldsNamesConstants.PHONE;
 import static constants.Constants.FileFieldsNamesConstants.SECONDARY_EMAIL;
 
+/**
+ * ListToDocConverter.java which implements interface Converter
+ */
 public class ListToDocConverter implements Converter {
-
+    /**
+     * Method for generating doc
+     *
+     * @param users       contains parsed information about users
+     * @param outFilePath path to final document
+     */
     public void generate(List<User> users, String outFilePath) {
-        //Blank Document
+        // Create Blank Document
         XWPFDocument document = new XWPFDocument();
 
         //Write the Document in file system
-        try(FileOutputStream out = new FileOutputStream(new File(outFilePath))) {
+        try (FileOutputStream out = new FileOutputStream(new File(outFilePath))) {
 
             //create table
             XWPFTable table = document.createTable();
@@ -57,6 +65,6 @@ public class ListToDocConverter implements Converter {
             throw new RuntimeException("File was not read properly", ex);
         }
 
-        System.out.println(outFilePath + " written successully");
+        System.out.println(outFilePath + " written successfully");
     }
 }

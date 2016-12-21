@@ -10,6 +10,11 @@ public final class UserUtils {
         // empty private constructor
     }
 
+    /** Method to specify columns
+     *
+     * @param user get user line
+     * @return student information about student
+     */
     public static User createUser(String[] user) {
         User student = new User();
         student.setFirstName(user[0]);
@@ -22,6 +27,11 @@ public final class UserUtils {
         return student;
     }
 
+    /**Method for printing information to console
+     *
+     * @param stream for printing to console
+     * @param users to get information about user
+     */
     public static void printDetails(PrintStream stream, List<User> users) {
         for (User user : users) {
             stream.println("Email: " + user.getEmail());
