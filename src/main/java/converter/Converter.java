@@ -1,12 +1,13 @@
 package converter;
 
-import model.User;
+import model.CSVLine;
 
 import java.util.List;
 
-/**Converter.java
+/**
+ * Converter.java
  * Interface that has the generate method
  * */
 public interface Converter {
-    void generate(List<User> users, String outFilePath) throws Exception;
+    void generate(List<CSVLine> lines, String outFilePath) throws Exception;
 }
